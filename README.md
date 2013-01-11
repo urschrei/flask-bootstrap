@@ -40,7 +40,7 @@ You should check that the versions of the packages currently present in `require
 
 The Bootstrap and Javascript components to be installed are detailed in `assets.yml`, and are present in the `static` directory. Your application's JS should be placed in the `app.js` file. Refer to http://webassets.readthedocs.org/en/latest/ for details of how to use and customise Webassets.
 
-You can connect to the DB using e.g. PGAdmin from your local machine by connecting to:
+You can connect to the DB using e.g. [PGAdmin](http://www.pgadmin.org) from your local machine by connecting to:
 
     localhost port 15432
     db: app_db
