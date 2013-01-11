@@ -26,7 +26,7 @@ Run an iPython shell with a test request context and imported models:
 Run or list alembic migrations:
 
     fab upgrade_db
-    fab_downgrade_db
+    fab downgrade_db
     fab show_migrations
 
 You may also specify optional revisions:
