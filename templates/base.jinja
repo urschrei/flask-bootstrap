@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>{% block title %}Title{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% assets "bootstrap" %}
+            <link rel="stylesheet" type="text/css" href="{{ ASSET_URL }}">
+        {% endassets %}
+        {% assets "bootstrap_responsive" %}
+            <link rel="stylesheet" type="text/css" href="{{ ASSET_URL }}">
+        {% endassets %}
+        <!--[if lt IE 9]>
+        {% assets "html5shim" %}
+            <script src="{{ ASSET_URL }}"></script>
+        {% endassets %}
+        <![endif]-->
+    </head>
+    <body>
+        <nav>
+            <div class="navbar navbar-inverse">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="#">App name</a>
+                        <div class="nav-collapse">
+                            <ul class="nav">
+                            </ul>
+                        </div><!--/.nav-collapse -->
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            {% block content %}{% endblock %}
+        </div>
+        {% assets "js_all" %}
+            <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+        {% endassets %}
+    </body>
