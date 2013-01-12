@@ -17,7 +17,5 @@ import re
 
 # class ExampleForm(Form):
 #     address = StringField(u"Address Entry",
-#         [
-#             validators.DataRequired(
-#                 message=u"You have to enter an address."),])
+#     [validators.DataRequired(message=u"You have to enter an address."),])
 #     submit = SubmitField()
