@@ -23,7 +23,7 @@ Run an [iPython](http://ipython.org) shell with a test request context and impor
 
     fab shell
 
-Run, list and create [alembic](http://alembic.readthedocs.org/en/latest/) migrations:
+Run, list, and create [alembic](http://alembic.readthedocs.org/en/latest/) migrations:
 
     fab upgrade_db
     fab downgrade_db
