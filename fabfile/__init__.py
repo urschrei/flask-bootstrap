@@ -2,28 +2,29 @@ import sys
 import os
 
 from fabric.api import env, run, local, require, cd, put
+from fabric.colors import cyan, yellow, green, red
 from fabric.decorators import task
 from alembic.config import Config
 from alembic import command
-
-
-import app
-import db
+import alembic_init
 import puppet
 import virtualenv
-# TODO figure out why we can't import alembic
 
 env.basename = os.path.dirname(__file__)
+
 alembic_cfg = Config(os.path.join(
     os.path.dirname(env.basename),
     "db",
     "alembic.ini"))
 
+alembic_cfg.set_main_option(
+    "sqlalchemy.url", "postgresql://flask_user:flask_pass@localhost/app_db")
+
 @task
 def build():
     """Execute build tasks for all components."""
     virtualenv.build()
-    db.build()
+    alembic_init.build()
 
 @task
 def run_app():
@@ -43,6 +44,13 @@ def shell():
         local('export DEV_CONFIGURATION=`pwd`/config/dev.cfg && venv/bin/ipython -i -c "%run shell.py"')
 
 # Alembic stuff. See http://alembic.readthedocs.org/en/latest/api.html
+@task
+def revision(msg):
+    """
+    Create a new Migration
+    """
+    command.revision(alembic_cfg, message=msg)
+
 @task
 def upgrade_db(rev="head"):
     """
