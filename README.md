@@ -1,4 +1,4 @@
-A [Flask](http://flask.pocoo.org) app skeleton in a Virtualbox VM, built using Vagrant(http://vagrantup.com), including:
+A [Flask](http://flask.pocoo.org) app skeleton in a Virtualbox VM, built using [Vagrant](http://vagrantup.com), including:
 
 - [Bootstrap](http://twitter.github.com/bootstrap/)
 - HTML5 template
@@ -23,11 +23,12 @@ Run an [iPython](http://ipython.org) shell with a test request context and impor
 
     fab shell
 
-Run or list [alembic](http://alembic.readthedocs.org/en/latest/) migrations:
+Run, list and create [alembic](http://alembic.readthedocs.org/en/latest/) migrations:
 
     fab upgrade_db
     fab downgrade_db
     fab show_migrations
+    fab revision:"Revision detail"
 
 You may also specify optional revisions:
 
