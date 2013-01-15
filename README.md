@@ -1,4 +1,4 @@
-A [Flask](http://flask.pocoo.org) app skeleton in a Virtualbox VM, built using [Vagrant](http://vagrantup.com), including:
+# A [Flask](http://flask.pocoo.org) app skeleton in a Virtualbox VM, built using [Vagrant](http://vagrantup.com), including:
 
 - [Bootstrap](http://twitter.github.com/bootstrap/)
 - HTML5 template
@@ -15,6 +15,7 @@ SSH to the VM:
 
     vagrant ssh
 
+**From within the VM, you can now…**  
 Run your app:
 
     fab run_app
@@ -25,15 +26,11 @@ Run an [iPython](http://ipython.org) shell with a test request context and impor
 
 Run, list, and create [alembic](http://alembic.readthedocs.org/en/latest/) migrations:
 
-    fab upgrade_db
-    fab downgrade_db
+    fab upgrade_db:optional revision
+    fab downgrade_db:revision
     fab show_migrations
     fab revision:"Revision detail"
 
-You may also specify optional revisions:
-
-    fab upgrade_db:b2343d67
-    fab downgrade_db:a34e876
 
 ## Notes
 
@@ -50,5 +47,7 @@ You can connect to the database using e.g. [PGAdmin](http://www.pgadmin.org) fro
 
 From within your VM, you can connect using the same credentials on port 5432.
 
-Alembic database revisions are created with the command `alembic revision -m "Migration detail"`. For details of how to use Alembic, refer to http://alembic.readthedocs.org/en/latest/
+## Todo
+
+- [] enable [auto-generate](https://alembic.readthedocs.org/en/latest/tutorial.html#auto-generating-migrations) support in Alembic
 
