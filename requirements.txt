@@ -1,4 +1,4 @@
-alembic==0.4.1
+alembic==0.4.2
 fabric==1.5.1
 cssmin==0.1.4
 Flask==0.9
