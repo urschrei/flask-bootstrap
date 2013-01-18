@@ -4,6 +4,7 @@
 - HTML5 template
 - Postgres DB
 - [Blueprint](http://flask.pocoo.org/docs/blueprints/) app structure
+- [Flask-Bcrypt](http://packages.python.org/Flask-Bcrypt/)
 
 ## Quickstart
 

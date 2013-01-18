@@ -13,3 +13,4 @@ yuicompressor==2.4.7
 PyYAML==3.10
 webassets==0.9.dev
 ipython
+Flask-Bcrypt==0.5.2
