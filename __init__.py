@@ -2,7 +2,6 @@ import os
 from flask import Flask, render_template
 from flask.ext.sqlalchemy import SQLAlchemy
 from flask.ext.assets import Environment
-from flask.ext.bcrypt import Bcrypt
 from webassets.loaders import YAMLLoader
 import locale
 import logging
@@ -31,9 +30,6 @@ bundles = YAMLLoader(os.path.realpath(
     os.path.join(os.path.dirname(__file__), 'assets.yml'))).load_bundles()
 for bundle_name, bundle in bundles.items():
     assets.register(bundle_name, bundle)
-
-# initiallise Flask-Bcrypt. See http://packages.python.org/Flask-Bcrypt/
-bcrypt = Bcrypt(app)
 
 # set up logging
 if not app.debug:
