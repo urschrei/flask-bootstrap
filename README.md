@@ -7,12 +7,13 @@
 - [Flask-Bcrypt](http://packages.python.org/Flask-Bcrypt/)
 
 ## Quickstart
+Ensure that [Virtualbox](https://www.virtualbox.org/wiki/Downloads) and [Vagrant](http://downloads.vagrantup.com/) are installed
 
 Clone this repository
 
 `cd` into the newly-cloned repo, and run `git submodule update --init`
 
-After installing [Virtualbox](https://www.virtualbox.org/wiki/Downloads) and [Vagrant](http://downloads.vagrantup.com/), create and boot the VM in the cloned repository:
+Create and boot the VM:
 
     vagrant up
 
@@ -22,7 +23,7 @@ SSH to the VM:
 
 ### From within the VM, you can now  
 
-Run your app:
+Run your app, which will then be available from localhost on `0.0.0.0`, port `5000`:
 
     fab run_app
 
