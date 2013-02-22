@@ -8,6 +8,10 @@
 
 ## Quickstart
 
+Clone this repository
+
+`cd` into the newly-cloned repo, and run `git submodule update --init`
+
 After installing [Virtualbox](https://www.virtualbox.org/wiki/Downloads) and [Vagrant](http://downloads.vagrantup.com/), create and boot the VM in the cloned repository:
 
     vagrant up
