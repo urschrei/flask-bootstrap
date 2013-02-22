@@ -11,6 +11,6 @@ setproctitle==1.1.6
 requests==1.0.2
 yuicompressor==2.4.7
 PyYAML==3.10
-webassets==0.9.dev
+https://github.com/miracle2k/webassets/tarball/master#egg=webassets-dev
 ipython
 Flask-Bcrypt==0.5.2
