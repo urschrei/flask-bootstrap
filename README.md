@@ -41,5 +41,5 @@ From within your VM, you can connect using the same credentials on port `5432`.
 
 ## Todo
 
-[ ] enable [auto-generate](https://alembic.readthedocs.org/en/latest/tutorial.html#auto-generating-migrations) support in Alembic
+- [ ] enable [auto-generate](https://alembic.readthedocs.org/en/latest/tutorial.html#auto-generating-migrations) support in Alembic
 
