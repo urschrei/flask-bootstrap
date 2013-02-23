@@ -11,7 +11,6 @@
 - Clone this repository
 - `cd` into the newly-cloned repo, and run `git submodule update --init`
 - Create and boot the VM: `vagrant up`
-
 - SSH to the VM: `vagrant ssh`
 
 ### From within the VM, you can now  
@@ -20,10 +19,10 @@
 - Run an [iPython](http://ipython.org) shell with a test request context and imported models: `fab shell`
 - Run, list, and create [alembic](http://alembic.readthedocs.org/en/latest/) migrations:
 
-    fab upgrade_db:optional revision
+    `fab upgrade_db:optional revision
     fab downgrade_db:revision
     fab show_migrations
-    fab revision:"Revision detail"
+    fab revision:"Revision detail"`
 
 
 ## Notes
