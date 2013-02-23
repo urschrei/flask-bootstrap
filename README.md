@@ -19,11 +19,10 @@
 - Run an [iPython](http://ipython.org) shell with a test request context and imported models: `fab shell`
 - Run, list, and create [alembic](http://alembic.readthedocs.org/en/latest/) migrations:
 
-    `fab upgrade_db:optional revision  
-    fab downgrade_db:revision  
-    fab show_migrations  
-    fab revision:"Revision detail"`  
-
+    `fab upgrade_db:optional revision`  
+    `fab downgrade_db:revision`  
+    `fab show_migrations`  
+    `fab revision:"Revision detail"`  
 
 ## Notes
 
@@ -42,5 +41,5 @@ From within your VM, you can connect using the same credentials on port `5432`.
 
 ## Todo
 
-- enable [auto-generate](https://alembic.readthedocs.org/en/latest/tutorial.html#auto-generating-migrations) support in Alembic
+[ ] enable [auto-generate](https://alembic.readthedocs.org/en/latest/tutorial.html#auto-generating-migrations) support in Alembic
 
