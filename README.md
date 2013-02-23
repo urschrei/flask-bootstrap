@@ -7,31 +7,18 @@
 - [Flask-Bcrypt](http://packages.python.org/Flask-Bcrypt/)
 
 ## Quickstart
-Ensure that [Virtualbox](https://www.virtualbox.org/wiki/Downloads) and [Vagrant](http://downloads.vagrantup.com/) are installed
+- Ensure that [Virtualbox](https://www.virtualbox.org/wiki/Downloads) and [Vagrant](http://downloads.vagrantup.com/) are installed
+- Clone this repository
+- `cd` into the newly-cloned repo, and run `git submodule update --init`
+- Create and boot the VM: `vagrant up`
 
-Clone this repository
-
-`cd` into the newly-cloned repo, and run `git submodule update --init`
-
-Create and boot the VM:
-
-    vagrant up
-
-SSH to the VM:
-
-    vagrant ssh
+- SSH to the VM: `vagrant ssh`
 
 ### From within the VM, you can now  
 
-Run your app, which will then be available from localhost on `0.0.0.0`, port `5000`:
-
-    fab run_app
-
-Run an [iPython](http://ipython.org) shell with a test request context and imported models:
-
-    fab shell
-
-Run, list, and create [alembic](http://alembic.readthedocs.org/en/latest/) migrations:
+- Run your app, which will then be reachable from localhost on `0.0.0.0:5000`: `fab run_app`
+- Run an [iPython](http://ipython.org) shell with a test request context and imported models: `fab shell`
+- Run, list, and create [alembic](http://alembic.readthedocs.org/en/latest/) migrations:
 
     fab upgrade_db:optional revision
     fab downgrade_db:revision
@@ -52,7 +39,7 @@ You can connect to the database using e.g. [PGAdmin](http://www.pgadmin.org) fro
     user: flask_user
     pass: flask_pass
 
-From within your VM, you can connect using the same credentials on port 5432.
+From within your VM, you can connect using the same credentials on port `5432`.
 
 ## Todo
 
