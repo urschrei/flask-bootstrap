@@ -3,7 +3,6 @@ fabric==1.5.1
 cssmin==0.1.4
 Flask==0.9
 Flask-SQLAlchemy==0.16
-Flask-Assets==0.7
 Flask-Testing==0.4
 Flask-Wtf==0.8.2
 psycopg2==2.4.5
@@ -11,6 +10,7 @@ setproctitle==1.1.6
 requests==1.0.2
 yuicompressor==2.4.7
 PyYAML==3.10
-https://github.com/miracle2k/webassets/tarball/master#egg=webassets-dev
+webassets==dev
+Flask-Assets==0.7
 ipython
 Flask-Bcrypt==0.5.2
