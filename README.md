@@ -8,8 +8,8 @@
 
 ## Quickstart
 - Ensure that [Virtualbox](https://www.virtualbox.org/wiki/Downloads) and [Vagrant](http://downloads.vagrantup.com/) are installed
-- Clone this repository (you may wish to clone it without any history — `git clone --depth 1 repo_url`, and specify your own remote(s). Downloading as a zip won't work, as you'll be missing the postgresql submodule. Sorry!
-- `cd` into the newly-cloned/unzipped repo, and run `git submodule update --init`
+- Clone this repository (you may wish to clone it without any history — `git clone --depth 1 repo_url`, and specify your own remote(s). Downloading as a zip won't work, as you'll be missing the postgresql submodule. Sorry!)
+- `cd` into the newly-cloned repo, and run `git submodule update --init`
 - Create and boot the VM: `vagrant up`
 - SSH to the VM: `vagrant ssh`
 
