@@ -3,6 +3,7 @@ fabric==1.5.1
 cssmin==0.1.4
 Flask==0.9
 Flask-SQLAlchemy==0.16
+sqlalchemy==0.8
 Flask-Testing==0.4
 Flask-Wtf==0.8.2
 psycopg2==2.4.5
