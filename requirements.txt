@@ -1,9 +1,9 @@
-alembic==0.4.2
-fabric==1.5.1
+alembic
+fabric
 cssmin==0.1.4
 Flask
 Flask-SQLAlchemy
-sqlalchemy==0.8
+sqlalchemy
 Flask-Testing==0.4
 Flask-Wtf
 psycopg2==2.4.5
