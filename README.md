@@ -17,12 +17,13 @@
 
 - Run your app, which will then be reachable from localhost on `0.0.0.0:5000`: `fab run_app`
 - Run an [iPython](http://ipython.org) shell with a test request context and imported models: `fab shell`
-- Run, list, and create [alembic](http://alembic.readthedocs.org/en/latest/) migrations:
+- Run, list, and create [alembic](http://alembic.readthedocs.org/en/latest/) migrations, including auto-generation:
 
     `fab upgrade_db:optional revision`  
     `fab downgrade_db:revision`  
     `fab show_migrations`  
-    `fab revision:"Revision detail"`  
+    `fab revision:"Message"`  
+    `fab autogenerate:"Message"`
 
 ## Notes
 

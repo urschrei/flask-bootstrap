@@ -3,19 +3,15 @@ from alembic import context
 from sqlalchemy import engine_from_config, pool
 from logging.config import fileConfig
 
-# autogenerate migrations
+# ensure we can access our apps dir
 import os
 import sys
 sys.path.append(os.getcwd())
-from __init__ import app
-from apps.shared.models import db
-from apps.example.models import *
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
 config = context.config
 alembic_config = config.get_section(config.config_ini_section)
-alembic_config['sqlalchemy.url'] = app.config['SQLALCHEMY_DATABASE_URI']
 
 # Interpret the config file for Python logging.
 # This line sets up loggers basically.
@@ -23,8 +19,8 @@ fileConfig(config.config_file_name)
 
 # add your model's MetaData object here
 # for 'autogenerate' support
-# from myapp import mymodel
-# target_metadata = mymodel.Base.metadata
+from apps.shared.models import db
+from apps.example.models import *
 target_metadata = db.metadata
 engine = engine_from_config(
     alembic_config,
