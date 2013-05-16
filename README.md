@@ -17,7 +17,7 @@
 
 - Run your app, which will then be reachable from localhost on `0.0.0.0:5000`: `fab run_app`
 - Run an [iPython](http://ipython.org) shell with a test request context and imported models: `fab shell`
-- Run, list, and create [alembic](http://alembic.readthedocs.org/en/latest/) migrations, including auto-generation[^1]:
+- Run, list, and create [alembic](http://alembic.readthedocs.org/en/latest/) migrations, including auto-generation:
 
     `fab upgrade_db:optional revision`  
     `fab downgrade_db:revision`  
@@ -26,6 +26,8 @@
     `fab autogenerate:"Message"`
 
 ## Notes
+
+Be aware that auto-generation of migrations has some [limitations](https://alembic.readthedocs.org/en/latest/tutorial.html#auto-generating-migrations).
 
 You should check that the versions of the packages currently present in `requirements.txt` match your requirements, and update / amend them if necessary.
 
@@ -41,7 +43,4 @@ You can connect to the database using e.g. [PGAdmin](http://www.pgadmin.org) fro
 From within your VM, you can connect using the same credentials on port `5432`.
 
 ## Todo
-- [x] enable [auto-generate](https://alembic.readthedocs.org/en/latest/tutorial.html#auto-generating-migrations) support in Alembic
-- [ ] fix the zip download submodule problem  
-
-[^1]: Be aware that autogeneration has some [limitations](https://alembic.readthedocs.org/en/latest/tutorial.html#auto-generating-migrations), however.
+- Fix the zip download submodule problem  
