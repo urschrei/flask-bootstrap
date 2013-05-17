@@ -1,6 +1,5 @@
 # this is a shared db instance for blueprints
 from sqlalchemy.ext.declarative import declared_attr
-from sqlalchemy.orm import validates
 from sqlalchemy.sql import expression
 from sqlalchemy.ext.compiler import compiles
 from sqlalchemy.types import DateTime
@@ -8,16 +7,23 @@ from flask.ext.sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
 
+
 class utcnow(expression.FunctionElement):
     """ UTC Timestamp for compilation """
     type = DateTime()
 
 
-# Define PG utcnow() function
+# Define DB-specific utcnow() functions
 @compiles(utcnow, 'postgresql')
 def pg_utcnow(element, compiler, **kw):
     """ Postgres UTC Timestamp """
     return "TIMEZONE('utc', CURRENT_TIMESTAMP)"
+
+
+@compiles(utcnow, 'mysql')
+def my_utcnow(element, compiler, **kw):
+    """ MySQL UTC Timestamp """
+    return "UTC_TIMESTAMP()"
 
 
 class AppMixin(object):
