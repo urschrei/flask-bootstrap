@@ -8,9 +8,11 @@
 
 ## Quickstart
 - Ensure that [Virtualbox](https://www.virtualbox.org/wiki/Downloads) and [Vagrant](http://downloads.vagrantup.com/) are installed
-- Clone this repository (you may wish to clone it without any history — `git clone --depth 1 repo_url`, and specify your own remote(s). Downloading as a zip won't work, as you'll be missing the postgresql submodule. Sorry!)
+- This setup assumes a 64-bit capable system – it should run on a [precise32](http://www.vagrantbox.es) box instead, but I haven't tried
+- Clone this repository (you may wish to clone it without any history — `git clone --depth 1 repo_url`)
 - `cd` into the newly-cloned repo, and run `git submodule update --init`
 - Create and boot the VM: `vagrant up`
+- Wait a while – Vagrant may have to download a precise64 box, and the Python requirements installation will be slow on the initial run – maybe you'd like to go for a quick wander, talk to a cat &c.
 - SSH to the VM: `vagrant ssh`
 
 ### From within the VM, you can now  
@@ -29,7 +31,7 @@
 
 Be aware that auto-generation of migrations has some [limitations](https://alembic.readthedocs.org/en/latest/tutorial.html#auto-generating-migrations).
 
-You should check that the versions of the packages currently present in `requirements.txt` match your requirements, and update / amend them if necessary.
+You should check that the versions of the packages currently present in `requirements.txt` match your requirements, and update / amend them if necessary. Currently, the most recent version of each package is being installed, and I'm not aware of any incompatibilities.
 
 The Bootstrap and Javascript components which are installed are detailed in `assets.yml`, and are present in the `static` directory. Your application's JS should be placed in the `app.js` file. Refer to [the webassets documentation](http://webassets.readthedocs.org/en/latest/) for details of how to use and customise the package.
 
