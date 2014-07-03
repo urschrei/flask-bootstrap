@@ -1,16 +1,14 @@
 from flask import current_app
-from flask.ext.wtf import (
-    Form,
-    Required,
+from flask.ext.wtf import Form
+from flask_wtf import RecaptchaField
+from wtforms.fields import (
     TextAreaField,
     StringField,
     RadioField,
     HiddenField,
     SubmitField,
-    Recaptcha,
-    RecaptchaField,
-    validators
     )
+from wtforms.validators import Required
 import re
 
 # Example form

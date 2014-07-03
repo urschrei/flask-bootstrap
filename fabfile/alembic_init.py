@@ -15,4 +15,5 @@ def build():
     with settings(hide('warnings'), warn_only=True):
         if not os.path.exists(config_file_path):
             do('alembic -c %s init db/postgresql' % config_file_path)
+            do('mkdir db/postgresql/versions')
         upgrade_db()
