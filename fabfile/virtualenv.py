@@ -26,8 +26,8 @@ def build():
             do('mkdir -p pyarchives', capture=True)
             do('venv/bin/pip install -v --download pyarchives -r requirements.txt --upgrade')
             # if webassets==dev exists, rename it
-            if os.path.exists("pyarchives/master"):
-                os.rename("pyarchives/master", "pyarchives/webassets-dev.tar.gz")
+            # if os.path.exists("pyarchives/master"):
+                # os.rename("pyarchives/master", "pyarchives/webassets-dev.tar.gz")
             pip = do(
                 'venv/bin/pip install --no-index --find-links=file://vagrant/pyarchives -r requirements.txt --upgrade',
                 capture=True)

@@ -10,7 +10,6 @@ psycopg2
 requests
 yuicompressor
 PyYAML
-webassets
 Flask-Assets
 ipython
 Flask-Bcrypt
